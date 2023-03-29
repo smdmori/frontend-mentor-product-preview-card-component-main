@@ -36,16 +36,21 @@ body {
   overflow: hidden;
 
   &__image {
+    background-image: url('../images/image-product-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    height: 100%;
+
     flex-basis: 50%;
-    max-height: 100%;
-    object-fit: cover;
   }
 
   &__text {
     flex-basis: 50%;
     height: 100%;
 
-    padding: 3em 3.5em 3em 3em;
+    padding: min(2vw, 2em);
   }
 
   &__subtitle {
@@ -63,7 +68,7 @@ body {
 
     color: $clr-very-dark-blue;
 
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
   }
 
   &__description {
@@ -72,12 +77,12 @@ body {
     font-size: 1.2rem;
     line-height: 1.5;
 
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   &__price {
     font-family: 'Fraunces', serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
     color: $clr-dark-cyan;
 
     &--discounted {
@@ -85,23 +90,65 @@ body {
       color: $clr-dark-grayish-blue;
       text-decoration: line-through;
     }
+
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+
+      margin-bottom: 2em;
+    }
   }
 
   &__btn {
     background-color: $clr-dark-cyan;
     color: white;
-    padding: 1em 3em;
+    padding: 1em 2em;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 10px;
   }
 }
 
-.price__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
+@media screen and (max-width: 800px) {
+  .product {
+    flex-direction: column;
+    width: 375px;
 
-  margin-bottom: 2em;
+    &__image {
+      background-image: url('../images/image-product-mobile.jpg');
+      background-position: center;
+      background-size: cover;
+      height: 40%;
+      width: 100%;
+    }
+
+    &__text {
+      padding: 1.5em;
+    }
+
+    &__subtitle {
+      margin-bottom: 1em;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      margin-bottom: 1em;
+    }
+
+    &__price {
+      &-container {
+        margin-bottom: 1em;
+      }
+    }
+
+    &__btn {
+      font-size: 1rem;
+    }
+  }
 }
