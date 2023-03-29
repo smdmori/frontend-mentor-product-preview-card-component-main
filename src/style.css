@@ -38,17 +38,18 @@ body {
 .product__subtitle {
   letter-spacing: 10px;
   text-transform: uppercase;
-  color: hsl(216deg, 3%, 50%);
+  color: hsl(228deg, 12%, 48%);
   margin-bottom: 1.5em;
 }
 .product__title {
   font-family: "Fraunces", serif;
   font-size: 2.5rem;
   font-weight: 700;
+  color: hsl(212deg, 21%, 14%);
   margin-bottom: 0.75em;
 }
 .product__description {
-  color: hsl(216deg, 3%, 50%);
+  color: hsl(228deg, 12%, 48%);
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 2em;
@@ -60,7 +61,7 @@ body {
 }
 .product__price--discounted {
   font-size: 1.1rem;
-  color: hsl(216deg, 3%, 50%);
+  color: hsl(228deg, 12%, 48%);
   text-decoration: line-through;
 }
 .product__btn {

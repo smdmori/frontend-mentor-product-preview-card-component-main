@@ -1,6 +1,7 @@
 $clr-dark-cyan: hsl(158, 36%, 37%);
 $clr-cream: hsl(32, 37%, 92%);
-$clr-grey: hsl(216, 3%, 50%);
+$clr-dark-grayish-blue: hsl(228, 12%, 48%);
+$clr-very-dark-blue: hsl(212, 21%, 14%);
 
 *,
 *::after,
@@ -50,7 +51,7 @@ body {
   &__subtitle {
     letter-spacing: 10px;
     text-transform: uppercase;
-    color: $clr-grey;
+    color: $clr-dark-grayish-blue;
 
     margin-bottom: 1.5em;
   }
@@ -60,11 +61,13 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
 
+    color: $clr-very-dark-blue;
+
     margin-bottom: 0.75em;
   }
 
   &__description {
-    color: $clr-grey;
+    color: $clr-dark-grayish-blue;
 
     font-size: 1.2rem;
     line-height: 1.5;
@@ -79,7 +82,7 @@ body {
 
     &--discounted {
       font-size: 1.1rem;
-      color: $clr-grey;
+      color: $clr-dark-grayish-blue;
       text-decoration: line-through;
     }
   }
